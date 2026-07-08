@@ -2,12 +2,13 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiArrowRight, HiArrowDown } from "react-icons/hi";
 import { FaGithub } from "react-icons/fa";
+import { imagen2 } from "../assets/imagenes";
 
 // ─── Config ─────────────────────────────────────────────────────────────────
 // Personalizá estos valores
 const NAME   = "Marcos Valladares";
 const GITHUB = "marcosvalla28";
-const BIO    = "I build fast, accessible and visually polished web experiences. Focused on clean code and thoughtful UI.";
+const BIO    = "Estoy capacitandome, y me gusta actualizarme de forma constante, estoy enfocado en el Frontend y buscando oportunidades para colaborar.";
 
 const ROLES = [
   "Desarrollador Frontend",
@@ -94,16 +95,40 @@ export default function Hero() {
           Disponible para Trabajar
         </motion.div>
 
-        {/* Heading principal */}
-        <motion.h1
+        {/* Heading principal + foto */}
+        <motion.div
           variants={itemVariants}
-          className="font-display font-bold text-5xl sm:text-6xl md:text-[4.5rem] text-foreground leading-[1.06] tracking-tight mb-4"
+          className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-5 mb-4"
         >
-          Hola, Soy{" "}
-          <span className="text-transparent bg-clip-text bg-linear-to-r from-accent to-soft">
-            {NAME}
-          </span>
-        </motion.h1>
+          {/* Foto de perfil — sin fondo, con glow detrás y flotación suave */}
+          <motion.div
+            className="relative shrink-0"
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+          >
+            {/* Glow detrás de la imagen */}
+            <div
+              aria-hidden="true"
+              className="absolute inset-0 rounded-full bg-accent/30 blur-2xl scale-90 pointer-events-none"
+            />
+            <img
+              src={imagen2}
+              alt={NAME}
+              className="relative w-50  sm:w-50  md:w-50  object-contain"
+              style={{
+                maskImage: "linear-gradient(to top, transparent, black 40%)",
+                WebkitMaskImage: "linear-gradient(to top, transparent, black 40%)",
+              }}
+            />
+          </motion.div>
+
+          <h1 className="font-display font-bold text-5xl sm:text-6xl md:text-[4.5rem] text-foreground leading-[1.06] tracking-tight">
+            Hola, Soy{" "}
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-accent to-soft">
+              {NAME}
+            </span>
+          </h1>
+        </motion.div>
 
         {/* Role cycling — slide vertical con AnimatePresence */}
         <motion.div
@@ -147,7 +172,7 @@ export default function Hero() {
             whileTap={{ scale: 0.97 }}
             transition={{ type: "spring", stiffness: 400, damping: 18 }}
           >
-            View Projects
+            Ver Proyectos
             <HiArrowRight size={15} />
           </motion.a>
 
@@ -159,7 +184,7 @@ export default function Hero() {
             whileTap={{ scale: 0.97 }}
             transition={{ type: "spring", stiffness: 400, damping: 18 }}
           >
-            Get in touch
+            Ponte en contacto
           </motion.a>
         </motion.div>
 
@@ -184,7 +209,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.6, duration: 0.7 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5"
+        className="absolute bottom-1 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5"
         aria-hidden="true"
       >
         <span className="text-[10px] text-muted/40 tracking-[0.2em] uppercase font-mono">
