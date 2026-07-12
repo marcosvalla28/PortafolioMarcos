@@ -92,7 +92,7 @@ export default function Projects() {
           {/* CTA — ver todos en GitHub */}
           <Button
             as="a"
-            href="https://github.com/yourusername"
+            href="https://github.com/marcosvalla28"
             target="_blank"
             rel="noopener noreferrer"
             variant="secondary"
@@ -100,7 +100,7 @@ export default function Projects() {
             iconRight={<HiArrowRight size={14} />}
             className="self-start md:self-auto shrink-0"
           >
-            All projects
+            Todos los Proyectos
           </Button>
         </motion.div>
 

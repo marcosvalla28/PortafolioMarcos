@@ -3,9 +3,10 @@ import { HiCode, HiServer, HiTerminal, HiAcademicCap } from "react-icons/hi";
 import {
   SiReact, SiJavascript, SiTypescript, SiTailwindcss, SiHtml5, SiCss,
   SiNodedotjs, SiExpress, SiPython, SiMongodb, SiPostgresql,
-  SiGit, SiGithub, SiVite, SiFigma, SiDocker,
+  SiGit, SiGithub, SiVite, SiFigma, SiDocker, 
   SiNextdotjs, SiGraphql, SiPrisma,
 } from "react-icons/si";
+import { FaUsers } from "react-icons/fa";
 
 // ─── Config — personalizá tus categorías ────────────────────────────────────
 // Nota: si algún ícono de react-icons/si no existe, simplemente omití el
@@ -18,7 +19,6 @@ const CATEGORIES = [
     skills: [
       { name: "React",        icon: SiReact       },
       { name: "JavaScript",   icon: SiJavascript  },
-      { name: "TypeScript",   icon: SiTypescript  },
       { name: "Tailwind CSS", icon: SiTailwindcss },
       { name: "HTML5",        icon: SiHtml5       },
       { name: "CSS3",         icon: SiCss        },
@@ -31,31 +31,18 @@ const CATEGORIES = [
     skills: [
       { name: "Node.js",    icon: SiNodedotjs  },
       { name: "Express",    icon: SiExpress    },
-      { name: "Python",     icon: SiPython     },
       { name: "MongoDB",    icon: SiMongodb    },
-      { name: "PostgreSQL", icon: SiPostgresql },
     ],
   },
   {
     id: "tools",
-    label: "Tools & Workflow",
+    label: "Herramientas y flujo de trabajo",
     icon: HiTerminal,
     skills: [
       { name: "Git",    icon: SiGit    },
       { name: "GitHub", icon: SiGithub },
       { name: "Vite",   icon: SiVite   },
-      { name: "Figma",  icon: SiFigma  },
-      { name: "Docker", icon: SiDocker },
-    ],
-  },
-  {
-    id: "learning",
-    label: "Currently Learning",
-    icon: HiAcademicCap,
-    skills: [
-      { name: "Next.js", icon: SiNextdotjs },
-      { name: "GraphQL", icon: SiGraphql   },
-      { name: "Prisma",  icon: SiPrisma    },
+      { name: "Scrum",  icon: FaUsers  },
     ],
   },
 ];
@@ -119,13 +106,13 @@ export default function Skills() {
         >
           {/* Número de sección — ajustá según el orden final */}
           <p className="font-mono text-accent text-sm mb-3 tracking-wide">
-            02. skills
+            02. Habilidades
           </p>
           <h2 className="font-display font-bold text-4xl md:text-5xl text-foreground mb-4">
-            Tech Stack
+            Tecnologías y herramientas
           </h2>
           <p className="text-muted text-base leading-relaxed max-w-md">
-            Technologies I&apos;ve been working with recently.
+            Tecnología con la que he estado trabajando recientemente.
           </p>
         </motion.div>
 

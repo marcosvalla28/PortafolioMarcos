@@ -184,7 +184,7 @@ export default function Hero() {
             whileTap={{ scale: 0.97 }}
             transition={{ type: "spring", stiffness: 400, damping: 18 }}
           >
-            Ponte en contacto
+            Contactame
           </motion.a>
         </motion.div>
 
@@ -194,7 +194,7 @@ export default function Hero() {
           href={`https://github.com/${GITHUB}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-sm text-muted hover:text-foreground transition-colors duration-200 group"
+          className="inline-flex mb-2 items-center gap-2 text-sm text-muted hover:text-foreground transition-colors duration-200 group"
         >
           <FaGithub size={15} />
           <span>{GITHUB}</span>
@@ -209,7 +209,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.6, duration: 0.7 }}
-        className="absolute bottom-1 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5"
+        className="fixed bottom-1 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5"
         aria-hidden="true"
       >
         <span className="text-[10px] text-muted/40 tracking-[0.2em] uppercase font-mono">
