@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { HiArrowRight } from "react-icons/hi";
 import ProjectCard from "../components/ProjectCard";
 import Button from "../components/Button";
+import { imagenes } from "../assets/proyectos/image";
 
 // ─── Config — reemplazá con tus proyectos reales ────────────────────────────
 // featured: true → el card ocupa md:col-span-2 en el grid
@@ -15,6 +16,7 @@ const PROJECTS = [
     github: "https://github.com/marcosvalla28/rollingMusic",
     live: "https://rolling-music.vercel.app",
     featured: true,
+    image: imagenes.imagen1,
   },
   {
     title: "Hotel Jamax",
@@ -23,6 +25,7 @@ const PROJECTS = [
     tech: ["React", "JavaScript","Tailwind CSS", "SupaBase"],
     github: "https://github.com/marcosvalla28/task-manager",
     live: "https://hotel-jamax.vercel.app",
+    image: imagenes.imagen2,
   },
   {
     title: "Formulario de Incripcion",
