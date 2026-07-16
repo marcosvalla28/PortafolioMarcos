@@ -8,28 +8,29 @@ import Button from "../components/Button";
 // image: "/path/to/screenshot.png" → opcional, muestra captura en el card
 const PROJECTS = [
   {
-    title: "Portfolio v2",
+    title: "Rolling Music",
     description:
-      "Portfolio personal construido con React, Framer Motion y Tailwind CSS. Animaciones fluidas, diseño dark y totalmente responsivo.",
-    tech: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
-    github: "https://github.com/yourusername/portfolio",
-    live: "https://yoursite.dev",
+      "Web de música con reproductor de audio, playlists y animaciones fluidas. Desarrollada con React, Tailwind CSS, con base de datos. Permite a los usuarios crear y gestionar sus propias listas de reproducción, explorar música por género y artista, y disfrutar de una experiencia de usuario interactiva y atractiva. Consumimos la API de deezer para obtener información de artistas, álbumes y canciones, y utilizamos MongoDB para almacenar datos de usuarios y sus playlists.",
+    tech: ["React", "JavaScript", "Tailwind CSS", "Vite", "node.js", "Express", "MongoDB"],
+    github: "https://github.com/marcosvalla28/rollingMusic",
+    live: "https://rolling-music.vercel.app",
     featured: true,
   },
   {
-    title: "Task Manager",
+    title: "Hotel Jamax",
     description:
-      "App de gestión de tareas full-stack con actualizaciones en tiempo real, drag & drop y colaboración en equipo sobre el stack MERN.",
-    tech: ["React", "Node.js", "MongoDB", "Express"],
-    github: "https://github.com/yourusername/task-manager",
-    live: "https://tasks-demo.vercel.app",
+      "Web hotelera con panel de administrador para modificar precios y subir imagenes, tiene calculadora de precio, uso supabase para guardar imagenes y usuario de admin.",
+    tech: ["React", "JavaScript","Tailwind CSS", "SupaBase"],
+    github: "https://github.com/marcosvalla28/task-manager",
+    live: "https://hotel-jamax.vercel.app",
   },
   {
-    title: "E-commerce Store",
+    title: "Formulario de Incripcion",
     description:
-      "Frontend de e-commerce con filtrado de productos, carrito de compras e integración con Stripe para pagos.",
-    tech: ["React", "Tailwind CSS", "Stripe", "Context API"],
-    github: "https://github.com/yourusername/ecommerce",
+      "Formulario para inscribirse en cursos, Con panel de administrador y posibilidad de exportar listado a archivo en formato xlsx.",
+    tech: ["JavaScript", "React", "Tailwind CSS", "SupaBase", "xlsx"],
+    github: "https://github.com/marcosvalla28/",
+    live: "https://formulario-inscripcion-weld.vercel.app/",
   },
   {
     title: "Weather Dashboard",
@@ -79,13 +80,13 @@ export default function Projects() {
           {/* Textos */}
           <div>
             <p className="font-mono text-accent text-sm mb-3 tracking-wide">
-              03. projects
+              03. Proyectos
             </p>
             <h2 className="font-display font-bold text-4xl md:text-5xl text-foreground mb-4">
-              Selected Work
+              Trabajos seleccionados
             </h2>
             <p className="text-muted text-base leading-relaxed max-w-md">
-              A few things I&apos;ve built. The rest lives on my GitHub.
+              Algunos de mis proyectos personales y colavorativos.
             </p>
           </div>
 
