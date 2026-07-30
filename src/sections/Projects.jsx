@@ -34,6 +34,7 @@ const PROJECTS = [
     tech: ["JavaScript", "React", "Tailwind CSS", "SupaBase", "xlsx"],
     github: "https://github.com/marcosvalla28/",
     live: "https://formulario-inscripcion-weld.vercel.app/",
+    image: imagenes.imagen3,
   },
   {
     title: "Weather Dashboard",
