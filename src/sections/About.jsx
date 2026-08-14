@@ -1,17 +1,18 @@
 import { motion } from "framer-motion";
 import { HiDownload } from "react-icons/hi";
 import Button from "../components/Button";
+import { imagen2 } from "../assets/imagenes";
 
 // ─── Config ──────────────────────────────────────────────────────────────────
 const STATS = [
-  { value: "2+",  label: "Years coding"    },
-  { value: "15+", label: "Projects built"  },
-  { value: "∞",   label: "Cups of coffee"  },
+  { value: "1 año",  label: "Desarrollando"    },
+  { value: "4", label: "Proyectos"  },
+  { value: "∞",   label: "Tazas de café"  },
 ];
 
 // ─── Animation variants ──────────────────────────────────────────────────────
 
-// Columna izquierda: stagger en cascada para cada elemento de texto
+
 const textContainerVariants = {
   hidden: {},
   visible: {
@@ -28,7 +29,7 @@ const textItemVariants = {
   },
 };
 
-// Stats: entran después de que la foto ya está visible
+
 const statsContainerVariants = {
   hidden: {},
   visible: {
@@ -64,7 +65,7 @@ export default function About() {
               variants={textItemVariants}
               className="font-mono text-accent text-sm mb-3 tracking-wide"
             >
-              01. about
+              01. Sobre mi
             </motion.p>
 
             {/* Heading */}
@@ -72,7 +73,7 @@ export default function About() {
               variants={textItemVariants}
               className="font-display font-bold text-4xl md:text-5xl text-foreground mb-8 leading-tight"
             >
-              A bit about me
+              Acerca de mi
             </motion.h2>
 
             {/* Párrafos — personalizá el contenido */}
@@ -82,38 +83,37 @@ export default function About() {
             >
               <p>
                 Hola, soy{" "}
-                <span className="text-foreground font-medium">Your Name</span>,
-                desarrollador frontend basado en{" "}
-                <span className="text-foreground font-medium">Tu Ciudad</span>.
+                <span className="text-foreground font-medium">Marcos Adrian Valladares</span>,
+                desarrollador frontend de{" "}
+                <span className="text-foreground font-medium">Termas de Rio Hondo</span>.
                 Me gusta convertir ideas en experiencias reales en la web —
                 desde interfaces limpias y minimalistas hasta apps interactivas más complejas.
               </p>
               <p>
                 Llevo{" "}
-                <span className="text-foreground font-medium">2+ años</span>{" "}
-                construyendo para la web, principalmente con React y su ecosistema.
+                <span className="text-foreground font-medium">1 año</span>{" "}
+                desarrollando webs, principalmente con React y su ecosistema.
                 Me importan los detalles: animaciones fluidas, código accesible y
                 soluciones que sean fáciles de mantener en el tiempo.
               </p>
               <p>
                 Cuando no estoy programando, estoy{" "}
-                <span className="text-foreground font-medium">escuchando música,
-                jugando videojuegos</span>{" "}
+                <span className="text-foreground font-medium">trabajando,
+                entrenando</span>{" "}
                 o explorando nuevas herramientas y frameworks.
               </p>
             </motion.div>
 
             {/* CTA: descargar CV */}
-            {/* Colocá tu CV en /public/cv.pdf */}
             <motion.div variants={textItemVariants}>
               <Button
                 as="a"
-                href="/cv.pdf"
+                href="./public/Cv-MarcosAdrianValladares.pdf"
                 download
                 variant="secondary"
                 iconRight={<HiDownload size={15} />}
               >
-                Download CV
+                Descargar CV
               </Button>
             </motion.div>
           </motion.div>
@@ -126,11 +126,7 @@ export default function About() {
             transition={{ duration: 0.65, ease: [0.25, 0.46, 0.45, 0.94], delay: 0.2 }}
             className="flex flex-col items-center lg:items-start gap-8"
           >
-            {/* ── Foto con frame accent ──────────────── */}
-            {/*
-              El frame es un `div` con border accent desplazado que queda
-              "detrás" de la foto. Se desplaza un poco más en hover.
-            */}
+            {/*Foto con frame accent*/}
             <div className="relative group w-64 h-72 md:w-72 md:h-80 shrink-0">
 
               {/* Border accent offset */}
@@ -147,19 +143,11 @@ export default function About() {
 
               {/* Contenedor de la foto */}
               <div className="relative rounded-2xl overflow-hidden w-full h-full bg-surface border border-border z-10">
-                {/*
-                  ── Reemplazá este bloque con tu foto real ──
-                  <img
-                    src="/img/profile.jpg"
-                    alt="Your Name"
-                    className="w-full h-full object-cover object-center"
+                <img
+                    src= {imagen2}
+                    alt="Marcos Adrian Valladares"
+                    className="w-full object-cover object-center"
                   />
-                */}
-                <div className="w-full h-full bg-linear-to-br from-accent/20 via-surface to-bg flex items-center justify-center select-none">
-                  <span className="font-display font-bold text-6xl text-accent/25">
-                    YN
-                  </span>
-                </div>
 
                 {/* Overlay sutil para dar profundidad al placeholder */}
                 <div

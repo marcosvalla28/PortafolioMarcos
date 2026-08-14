@@ -4,16 +4,16 @@ import { HiMenuAlt3, HiX } from "react-icons/hi";
 import { Logo } from "../assets/imagenes"
 
 // ─── Config ────────────────────────────────────────────────────────────────
-// Actualiza tu nombre y los hrefs según las IDs de tus secciones
+
 const NAV_LINKS = [
-  { label: "About",    href: "#about"    },
-  { label: "Skills",   href: "#skills"   },
-  { label: "Projects", href: "#projects" },
-  { label: "Contact",  href: "#contact"  },
+  { label: "Sobre mi",    href: "#about"    },
+  { label: "Habilidades",   href: "#skills"   },
+  { label: "Proyectos", href: "#projects" },
+  { label: "Contacto",  href: "#contact"  },
 ];
 
 // ─── NavLink ────────────────────────────────────────────────────────────────
-// Underline que se expande desde el centro al hacer hover (CSS puro, 60fps)
+
 function NavLink({ href, label, onClick }) {
   return (
     <a

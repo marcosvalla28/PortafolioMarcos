@@ -6,8 +6,8 @@ import { HiArrowRight, HiCheckCircle, HiExclamationCircle, HiMail } from "react-
 import Button from "../components/Button";
 
 // ─── Config ──────────────────────────────────────────────────────────────────
-const EMAIL        = "yourname@email.com";
-const FORMSPREE_ID = "YOUR_FORM_ID"; // formspree.io → crear cuenta gratis → copiar el ID
+const EMAIL        = "markosvalla@hotmail.com";
+const FORMSPREE_ID = import.meta.env.VITE_FORMSPREE_ID; 
 
 const SOCIALS = [
   { icon: FaGithub,     href: "https://github.com/yourusername",      label: "GitHub"   },
@@ -92,7 +92,7 @@ export default function Contact() {
               variants={itemVariants}
               className="font-mono text-accent text-sm mb-3 tracking-wide"
             >
-              04. contact
+              04. Contacto
             </motion.p>
 
             {/* Heading */}
@@ -100,7 +100,7 @@ export default function Contact() {
               variants={itemVariants}
               className="font-display font-bold text-4xl md:text-5xl text-foreground leading-tight mb-6"
             >
-              Let&apos;s work<br className="hidden sm:block" /> together
+              Trabajemos juntos
             </motion.h2>
 
             {/* Descripción */}
@@ -108,7 +108,7 @@ export default function Contact() {
               variants={itemVariants}
               className="text-muted text-base leading-relaxed mb-10 max-w-sm"
             >
-              ¿Tenés un proyecto en mente, querés colaborar o simplemente decir hola?
+              ¿Tenés un proyecto en mente, querés colaborar o simplemente alguna consulta?
               Mi bandeja de entrada está abierta.
             </motion.p>
 
