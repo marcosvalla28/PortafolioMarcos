@@ -37,10 +37,10 @@ const PROJECTS = [
     image: imagenes.imagen3,
   },
   {
-    title: "Weather Dashboard",
+    title: "Book de Fotos",
     description:
-      "Dashboard del clima sobre OpenWeatherMap API con pronóstico de 7 días, búsqueda por ciudad y gráficos interactivos.",
-    tech: ["JavaScript", "CSS3", "REST API", "Chart.js"],
+      "Web de fotos con panel de administrador para subir y eliminar fotos y descripcion de la misma, book con animacion tipo libro y reproduccion de musica, usando react pageflip y supabase para guardar imagenes.",
+    tech: ["JavaScript", "CSS3", "React", "Tailwind CSS", "SupaBase"],
     github: "https://github.com/yourusername/weather-app",
     live: "https://weather-demo.netlify.app",
   },

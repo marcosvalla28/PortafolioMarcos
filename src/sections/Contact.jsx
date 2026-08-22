@@ -10,9 +10,9 @@ const EMAIL        = "markosvalla@hotmail.com";
 const FORMSPREE_ID = import.meta.env.VITE_FORMSPREE_ID; 
 
 const SOCIALS = [
-  { icon: FaGithub,     href: "https://github.com/yourusername",      label: "GitHub"   },
-  { icon: FaLinkedinIn, href: "https://linkedin.com/in/yourusername", label: "LinkedIn" },
-  { icon: FaXTwitter,   href: "https://x.com/yourusername",           label: "X"        },
+  { icon: FaGithub,     href: "https://github.com/marcosvalla28",      label: "GitHub"   },
+  { icon: FaLinkedinIn, href: "https://www.linkedin.com/in/marcos-adrian-valladares-65a043286/", label: "LinkedIn" },
+  { icon: FaXTwitter,   href: "https://x.com/marcosvalla1",           label: "X"        },
 ];
 
 // ─── Animation variants ──────────────────────────────────────────────────────
@@ -57,7 +57,7 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("loading");
+    setStatus("cargando");
     try {
       const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
         method:  "POST",
@@ -65,7 +65,7 @@ export default function Contact() {
         body:    JSON.stringify(form),
       });
       if (res.ok) {
-        setStatus("success");
+        setStatus("enviado");
         setForm({ name: "", email: "", message: "" });
       } else {
         setStatus("error");
@@ -165,10 +165,10 @@ export default function Contact() {
             <div className="bg-surface border border-border rounded-2xl p-8">
               <AnimatePresence mode="wait">
 
-                {/* ── Success state ─────────────────── */}
-                {status === "success" ? (
+                {/* ── ESTADO ENVIADO ─────────────────── */}
+                {status === "enviado" ? (
                   <motion.div
-                    key="success"
+                    key="enviado"
                     initial={{ opacity: 0, scale: 0.94 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.94 }}
@@ -179,7 +179,7 @@ export default function Contact() {
                       <HiCheckCircle size={34} />
                     </div>
                     <h3 className="font-display font-bold text-xl text-foreground">
-                      Message sent!
+                      Mensaje Enviado!
                     </h3>
                     <p className="text-muted text-sm max-w-xs leading-relaxed">
                       Gracias por escribirme. Te respondo a la brevedad.
@@ -190,7 +190,7 @@ export default function Contact() {
                       onClick={() => setStatus("idle")}
                       className="mt-2"
                     >
-                      Send another
+                      Enviar otro
                     </Button>
                   </motion.div>
 
@@ -216,9 +216,9 @@ export default function Contact() {
                         <motion.div variants={fieldVariants}>
                           <FormField
                             id="name"
-                            label="Name"
+                            label="Nombre"
                             type="text"
-                            placeholder="Your Name"
+                            placeholder="Tu Nombre"
                             value={form.name}
                             onChange={handleChange}
                             required
@@ -229,7 +229,7 @@ export default function Contact() {
                             id="email"
                             label="Email"
                             type="email"
-                            placeholder="you@email.com"
+                            placeholder="tu@email.com"
                             value={form.email}
                             onChange={handleChange}
                             required
@@ -241,9 +241,9 @@ export default function Contact() {
                       <motion.div variants={fieldVariants}>
                         <FormField
                           id="message"
-                          label="Message"
+                          label="Mensaje"
                           type="textarea"
-                          placeholder="Tell me about your project..."
+                          placeholder="Contame de tu proyecto..."
                           value={form.message}
                           onChange={handleChange}
                           required
@@ -276,14 +276,14 @@ export default function Contact() {
                       <motion.div variants={fieldVariants}>
                         <Button
                           type="submit"
-                          isLoading={status === "loading"}
-                          iconRight={status !== "loading"
+                          isLoading={status === "cargando"}
+                          iconRight={status !== "cargando"
                             ? <HiArrowRight size={15} />
                             : undefined
                           }
                           className="w-full justify-center"
                         >
-                          {status === "loading" ? "Sending..." : "Send message"}
+                          {status === "cargando" ? "Enviando..." : "Enviar Mensaje"}
                         </Button>
                       </motion.div>
                     </motion.div>
