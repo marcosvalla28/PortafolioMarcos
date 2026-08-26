@@ -1,1 +1,58 @@
 @import "tailwindcss";
+
+/* ─── Google Fonts ─────────────────────────────────────────────────────────
+   Space Grotesk → logo, headings (font-display)
+   Inter         → body text  (font-body)
+   JetBrains Mono→ code accents (font-mono)
+   ─────────────────────────────────────────────────────────────────────────── */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;1,14..32,400&family=JetBrains+Mono:wght@400;500&display=swap");
+
+
+/* ─── Design tokens (Tailwind v4 @theme) ───────────────────────────────────
+   Accesibles como clases utilitarias:
+     bg-bg, bg-surface, border-border,
+     text-accent, text-foreground, text-muted,
+     font-display, font-body, font-mono
+   ─────────────────────────────────────────────────────────────────────────── */
+@theme {
+  /* Typography */
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body:    "Inter",         sans-serif;
+  --font-mono:    "JetBrains Mono", monospace;
+
+  /* Color palette — violeta nocturno */
+  --color-bg:         #06060c;   /* fondo principal: negro con tinte violeta */
+  --color-surface:    #0e0e18;   /* superficies elevadas (cards, menú) */
+  --color-border:     #1a1a2e;   /* bordes sutiles con tinte índigo */
+  --color-accent:     #7b61ff;   /* violeta eléctrico — color firma */
+  --color-soft:       #bfa8ff;   /* violeta claro para texto de acento */
+  --color-foreground: #edeaf5;   /* blanco cálido con subtono violeta */
+  --color-muted:      #7a7a96;   /* gris-azul para texto secundario */
+}
+
+/* ─── Base styles ───────────────────────────────────────────────────────────
+   Nota: scroll-behavior se omite intencionalmente porque
+   lenis controla el scroll suavizado a nivel de JS.
+   ─────────────────────────────────────────────────────────────────────────── */
+@layer base {
+  html {
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-foreground);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Selección de texto con el color acento */
+  ::selection {
+    background-color: rgb(123 97 255 / 0.22);
+    color: var(--color-foreground);
+  }
+
+  /* Reset de borde para todos los elementos */
+  *,
+  *::before,
+  *::after {
+    border-color: var(--color-border);
+  }
+}
