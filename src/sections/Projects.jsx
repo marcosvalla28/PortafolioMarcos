@@ -3,6 +3,7 @@ import { HiArrowRight } from "react-icons/hi";
 import ProjectCard from "../components/ProjectCard";
 import Button from "../components/Button";
 import { imagenes } from "../assets/proyectos/image";
+import { image } from "framer-motion/client";
 
 // ─── Config — reemplazá con tus proyectos reales ────────────────────────────
 // featured: true → el card ocupa md:col-span-2 en el grid
@@ -41,8 +42,9 @@ const PROJECTS = [
     description:
       "Web de fotos con panel de administrador para subir y eliminar fotos y descripcion de la misma, book con animacion tipo libro y reproduccion de musica, usando react pageflip y supabase para guardar imagenes.",
     tech: ["JavaScript", "CSS3", "React", "Tailwind CSS", "SupaBase"],
-    github: "https://github.com/yourusername/weather-app",
-    live: "https://weather-demo.netlify.app",
+    github: "https://github.com/marcosvalla28/albumYanel",
+    live: "https://album-yanel.vercel.app/",
+    image: imagenes.imagen4,
   },
 ];
 
