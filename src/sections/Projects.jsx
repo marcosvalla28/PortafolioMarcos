@@ -5,9 +5,7 @@ import Button from "../components/Button";
 import { imagenes } from "../assets/proyectos/image";
 import { image } from "framer-motion/client";
 
-// ─── Config — reemplazá con tus proyectos reales ────────────────────────────
-// featured: true → el card ocupa md:col-span-2 en el grid
-// image: "/path/to/screenshot.png" → opcional, muestra captura en el card
+
 const PROJECTS = [
   {
     title: "Rolling Music",
@@ -58,8 +56,7 @@ const gridVariants = {
   },
 };
 
-// Wrapper de cada card — controla la entrada escalonada
-// La card interna ya tiene whileHover propio; este wrapper maneja solo el enter.
+
 const cardWrapperVariants = {
   hidden:  { opacity: 0, y: 32 },
   visible: {
@@ -92,7 +89,7 @@ export default function Projects() {
               Trabajos seleccionados
             </h2>
             <p className="text-muted text-base leading-relaxed max-w-md">
-              Algunos de mis proyectos personales y colavorativos.
+              Algunos de mis proyectos personales y colaborativos.
             </p>
           </div>
 
@@ -111,19 +108,7 @@ export default function Projects() {
           </Button>
         </motion.div>
 
-        {/* ── Grid de proyectos ────────────────────── */}
-        {/*
-          Layout:
-            mobile  → 1 columna
-            md      → 2 columnas  (featured: col-span-2 → full width)
-            lg      → 3 columnas  (featured: col-span-2 → 2/3 del ancho)
-
-          El stagger se maneja acá con gridVariants → cardWrapperVariants.
-          ProjectCard recibe el prop `noMotion` implícitamente: como el wrapper
-          ya controla la entrada, si querés evitar la doble animación podés
-          comentar los props `initial` / `whileInView` dentro de ProjectCard.
-          En la práctica la diferencia es imperceptible.
-        */}
+        
         <motion.div
           variants={gridVariants}
           initial="hidden"

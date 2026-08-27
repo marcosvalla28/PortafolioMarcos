@@ -108,7 +108,7 @@ export default function About() {
             <motion.div variants={textItemVariants}>
               <Button
                 as="a"
-                href="./public/Cv-MarcosAdrianValladares.pdf"
+                href="/Cv-MarcosAdrianValladares.pdf"
                 download
                 variant="secondary"
                 iconRight={<HiDownload size={15} />}
